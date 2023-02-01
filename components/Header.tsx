@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Logo from "../public/Logo.svg";
+import Logo from "../public/logo.svg";
 import account from "../public/account.png";
 import { AiOutlineSearch, AiFillBell } from "react-icons/ai";
 import Link from "next/link";
