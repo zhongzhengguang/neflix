@@ -4,8 +4,10 @@ import account from "../public/account.png";
 import { AiOutlineSearch, AiFillBell } from "react-icons/ai";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import useAuth from "@/hooks/useAuth";
 function Header() {
   const [isScroll, setIsScroll] = useState(false);
+  const { signIn, signUp, logout } = useAuth();
   // 下拉後變換背景顏色
   useEffect(() => {
     const handleScroll = () => {
@@ -45,7 +47,7 @@ function Header() {
         <p className=" hidden lg:inline">Kids</p>
         <AiFillBell className=" h-6 w-6" />
         <Link href="/account">
-          <Image src={account} alt="/" />
+          <Image onClick={logout} src={account} alt="/" />
         </Link>
       </div>
     </header>
