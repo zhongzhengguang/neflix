@@ -4,7 +4,7 @@ import { modalState, movieState } from "../atoms/modalAtom";
 import { AiOutlineClose, AiOutlinePlus } from "react-icons/ai";
 import { FaPlay } from "react-icons/fa";
 import { FiThumbsUp } from "react-icons/fi";
-import { BsFillVolumeUpFill, BsVolumeMuteFill } from "react-icons/bs";
+import { FiVolume2, FiVolumeX } from "react-icons/fi";
 import { useEffect, useState } from "react";
 import { Movie, Element, Genre } from "../typings";
 import ReactPlayer from "react-player/lazy";
@@ -83,9 +83,9 @@ function Modal() {
             </div>
             <button onClick={() => setMuted(!muted)}>
               {muted ? (
-                <BsVolumeMuteFill className=" w-6 h-6" />
+                <FiVolume2 className=" w-6 h-6" />
               ) : (
-                <BsFillVolumeUpFill className=" w-6 h-6" />
+                <FiVolumeX className=" w-6 h-6" />
               )}
             </button>
           </div>
