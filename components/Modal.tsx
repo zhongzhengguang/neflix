@@ -81,11 +81,11 @@ function Modal() {
                 <FiThumbsUp className=" h-7 w-7" />
               </button>
             </div>
-            <button onClick={() => setMuted(!muted)}>
+            <button onClick={() => setMuted(!muted)} className="modalButton">
               {muted ? (
-                <FiVolume2 className=" w-6 h-6" />
-              ) : (
                 <FiVolumeX className=" w-6 h-6" />
+              ) : (
+                <FiVolume2 className=" w-6 h-6" />
               )}
             </button>
           </div>
